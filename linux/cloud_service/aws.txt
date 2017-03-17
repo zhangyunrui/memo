@@ -1,0 +1,47 @@
+shadowsocks
+    1.install shadowsocks
+    2./etc/shadowsocks/shadowsocks.json
+        server
+        {
+        "server":"0.0.0.0",
+        "server_port":8989(your_server_port),
+        "password":"1234"(your_passwd),
+        "timeout":300,
+        "method":"aes-256-cfb",
+        "fast_open":false
+        }
+        client
+        {
+        "server":"0.0.0.0"(your_proxy_add),
+        "server_port":8989(your_server_port),
+        "local_address":"127.0.0.1",
+        "password":"1234"(your_passwd),
+        "timeout":600,
+        "method":"aes-256-cfb"
+        }
+    3.init
+        server
+        ssserver -c /etc/shadowsocks/shadowsocks.json
+        client
+        sslocal -c /etc/shadowsocks/shadowsocks.json
+    4.浏览时选择auto_switch模式，只是switch_rules里的才翻墙
+
+supervisor
+    1.install supervisor
+    2.service supervisor restart
+    3./etc/supervisor/conf.d/shadowsocks.conf(your_conf)
+        [program:shadowsocks]
+        command=sslocal -c /etc/shadowsocks/shadowsocks.json
+        autostart=true
+        autorestart=true
+        stderr_logfile=/var/log/shadowsocks.err.log
+        stdout_logfile=/var/log/shadowsocks.out.log
+    4.supervisorctl reread
+    5.supervisorctl update
+    6.supervisorctl
+        restart shadowsocks
+        tail shadowsocks
+        tail shadowsocks stderr
+        status
+    7.see more in
+        https://www.digitalocean.com/community/tutorials/how-to-install-and-manage-supervisor-on-ubuntu-and-debian-vps

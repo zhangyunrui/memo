@@ -1,0 +1,11 @@
+1.尝试ping 192.168.1.1
+2.尝试局域网之间互ping
+3.释放ip地址：ipconfig/release
+4.重新获取ip地址：ipconfig/renew
+5.DNS可设成114.114.114.114(Domain Name System, 域名系统)
+6.若MAC被禁，可修改MAC地址(Media/Medium Access Control, 物理地址，具有全球唯一性，一共48位二进制bit(比特位))
+    网络连接里点属性->高级->网络地址->
+    第1字节的第8bit位标识这个地址是组播地址还是单播地址(以太网传输协定：高字节先传，字节内低位先传)todo:组播/单播
+7.看DHCP是否正确连接(Dynamic Host Configuration Protocol, 局域网网络协议，使用UDP协议工作，)
+    是一种高效IP地址分配方法
+

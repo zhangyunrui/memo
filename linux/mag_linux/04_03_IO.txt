@@ -1,0 +1,35 @@
+系统设定
+     默认输出设备：标准输出，STDOUT，1
+     默认输入设备：标准输入，STDIN，0
+     标准错误输出：STDERR，2
+
+I/O重定向：
+    1.标准输出重定向
+        >：覆盖
+        >|：强制覆盖
+        >>：追加
+        eg.
+            cat >> test.txt
+                多行输入重定向到test.txt
+                以ctrl+D结束
+    2.错误输出重定向
+        2>：覆盖
+        2>|：强制覆盖
+        2>>：追加
+        &>：标准&错误
+        &>>：追加 标准&错误
+    3.输入重定向
+        <：
+            eg.
+                tr 'a-z' 'A-Z' < /etc/fstab
+        <<：在此处生成文档
+            eg.
+                cat << EOF
+                cat << EOF >> /tmp/myfile.txt
+                    多行输入（EOF之前的文本）重定向到 /tmp/myfile.txt
+
+管道：
+    eg.
+        echo 'hello world' | tr 'a-z' 'A-Z'
+        cut -d: -f3 /etc/passwd | sort -n
+        wc -l /etc/passwd | cut -d' ' -f1

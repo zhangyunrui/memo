@@ -1,0 +1,8 @@
+预处理(preprocessing)-E .i
+编译(compilation)-S .s
+汇编(assembly)-c .o
+链接(linking)
+
+参考http://www.cnblogs.com/ggjucheng/archive/2011/12/14/2287738.html
+
+

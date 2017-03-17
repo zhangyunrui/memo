@@ -1,0 +1,46 @@
+Linux下Java安装与配置
+安装
+
+以JDK1.6.0_43为例
+
+下载jdk-6u43-linux-x64.bin，http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+增加可执行权限 chmod +x jdk-6u43-linux-x64.bin，
+
+执行 ./jdk-6u43-linux-x64.bin 生成目录jdk1.6.0_43
+
+拷贝到/usr/share下，mv jdk1.6.0_43 /usr/share
+
+另外，jdk-6u43-linux-x64.bin将所有文件解压缩到当前目录的jdk$verison_$update目录，
+
+jdk-6u43-linux-x64-rpm.bin解压缩生成rpm包，用rpm -ivh命令安装
+
+ 
+
+配置环境变量
+
+在/etc/profile下增加
+
+# set Java environment
+JAVA_HOME=/usr/share/jdk1.6.0_43
+PATH=$JAVA_HOME/bin:$PATH
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export PATH
+export CLASSPATH
+
+ 
+
+测试
+
+[root@localhost ~]# echo $JAVA_HOME
+/usr/share/jdk1.6.0_43
+[root@localhost ~]# echo $PATH
+/usr/share/jdk1.6.0_43/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+[root@localhost ~]# echo $CLASSPATH
+.:/usr/share/jdk1.6.0_43/lib/dt.jar:/usr/share/jdk1.6.0_43/lib/tools.jar
+
+[root@localhost ~]# java -version
+java version "1.6.0_43"
+Java(TM) SE Runtime Environment (build 1.6.0_43-b01)
+Java HotSpot(TM) 64-Bit Server VM (build 20.14-b01, mixed mode)

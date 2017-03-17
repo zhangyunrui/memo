@@ -1,0 +1,19 @@
+动态库
+    使用程序时，动态获取库，一般以.so为后缀，使用时需要定义环境变量LD_LIBRARY_PATH
+        way1.export LD_LIBRARY_PATH='.'
+        way2.把上列语句写入.bashrc里
+        way3.sudo cp libhello.so /usr/lib/
+静态库
+    编译程序时，把库编译进程序
+
+动态库编译方法（配套shared/文件夹查看）
+    1.生成动态库
+        gcc -shared hello.c -o libhello.so
+            error: relocation R_X86_64_32 against `.rodata' can not be used when making a shared object;
+            reason: system is AMD64
+            solution: gcc -fpic -shared hello.c -o libhello.so
+    2.编译目标文件，-l指定动态库（hello表示libhello.so），-L指定动态库位置。注意test.c里需要有对库函数的声明（void hello();）
+        gcc -lhello -L. test.c -o test
+
+
+

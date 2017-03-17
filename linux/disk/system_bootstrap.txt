@@ -1,0 +1,1 @@
+在windows中用EasyBCD引导ubuntu安装镜像实现ubuntu引导。
