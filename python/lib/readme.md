@@ -1,0 +1,1 @@
+安装python3.6,http://askubuntu.com/questions/865554/how-do-i-install-python-3-6-using-apt-get
