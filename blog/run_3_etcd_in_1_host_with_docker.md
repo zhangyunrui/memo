@@ -1,8 +1,8 @@
 ### 目标
 在一个主机内用docker生成一个3节点的etcd
 ### 知识点
-- [docker network create](./coreos/docker/network.md#create)
-- [docker run --ip](./coreos/docker/run.md#指定ip)
+- [docker network create](../coreos/docker/network.md#create)
+- [docker run --ip](../coreos/docker/run.md#指定ip)
 ### 操作流程
 1. 生成用户自定义的 bridge network，
 shell： `docker network create dockeretcd --subnet 172.18.0.0/16` 
