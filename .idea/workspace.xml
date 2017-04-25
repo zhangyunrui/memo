@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="825eb3a9-89bf-4b83-b028-ea0ba43a087e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog/run_3_etcd_in_1_host_with_docker.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coreos/docker/network.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coreos/docker/other.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coreos/docker/run.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coreos/etcd/etcdctl.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other/emacs.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other/test.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/.idea/preferred-vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/.idea/python.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/base/diff_between_2_and_3.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/class/singleton.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/class/singleton.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python/class/singleton_2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/note.iml" afterPath="$PROJECT_DIR$/.idea/note.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/.idea/preferred-vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/.idea/python.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python/.idea/workspace.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -107,8 +93,8 @@
         <entry file="file://$PROJECT_DIR$/blog/run_3_etcd_in_1_host_with_docker.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="510">
-                <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <first_editor relative-caret-position="204">
+                <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -1124,8 +1110,8 @@
     <entry file="file://$PROJECT_DIR$/blog/run_3_etcd_in_1_host_with_docker.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <first_editor relative-caret-position="204">
+            <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
             <folding />
           </first_editor>
           <second_editor />
