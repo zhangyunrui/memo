@@ -1,0 +1,2 @@
+- -a 密码；-n 数据库
+- 通配删除：redis-cli keys "\*pattern\*" | xargs redis-cli del

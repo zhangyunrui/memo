@@ -33,5 +33,6 @@ docker run -d -v /usr/share/ca-certificates/:/etc/ssl/certs \
 - 写docker-compose.yml时，etcd的参数到底该写在哪儿
 - [关于docker的15个小tip](http://www.cnblogs.com/elnino/p/3899136.html)
 - [容器间通信](https://docs.docker.com/engine/userguide/networking/default_network/container-communication/)
+- [容器间通信文档](https://yeasy.gitbooks.io/docker_practice/content/advanced_network/port_mapping.html)
 - 通过nginx等动态发现节点
 - 集群管理，增加及删除节点等
