@@ -1,0 +1,1 @@
+- 查看端口 netstat -apn
