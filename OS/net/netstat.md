@@ -1,0 +1,1 @@
+- 查看端口 netstat -apn | grep 8000

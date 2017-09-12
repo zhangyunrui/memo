@@ -1,0 +1,2 @@
+- doctoc 自动生成md的目录，用npm安装
+- multitail 同时查看多个终端的工具

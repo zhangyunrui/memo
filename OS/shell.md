@@ -1,0 +1,5 @@
+- 显示grep行周围五行```<command> | grep [str] -C 5```
+- 创建并进入文件夹```mkdir foo && cd $_```
+- 选定后鼠标中键: 复制并粘贴
+- 显示硬盘容量`df -h`
+- `mkdir -p` -> no error if existing, make parent directories as needed

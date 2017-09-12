@@ -1,1 +1,0 @@
-- rabbitmqctl stop

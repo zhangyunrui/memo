@@ -1,0 +1,1 @@
+The number of connections it will hold open is pool_size=5 (default). If you open a sixth connection, one of the connections in the queue will be closed, as long as it is idle. If none are idle, the QueuePool will open additional ones, upto max_overflow=10 (default). 

@@ -1,2 +1,0 @@
-- git checkout -b [branch_name]
-- git reset --hard [version num]
