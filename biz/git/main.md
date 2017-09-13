@@ -1,9 +1,9 @@
 - 同步原则
   - 若要修bug，都在develop上修，修完再merge到master，保证master和develop一致；原则上在这之后需要合并到所有其它的开发分支，尤其是改的地方会和其它开发分支产生冲突的地方
 - checkout
-  - 新建并切换分支`git checkout -b [branch_name]`
-  - 同步另外一个分支的某个文件`git checkout --patch [branch_name] [file_name]`
-- 切换到某个版本`git reset --hard [version num]`
+  - 新建并切换分支`git checkout -b <branch>`
+  - 同步另外一个分支的某个文件`git checkout --patch <branch> <file>`
+- 切换到某个版本`git reset --hard <version num>`
 - fork后同步源的更新
     1. 首先要先确定一下是否建立了主repo的远程源：
     
@@ -24,3 +24,20 @@
     git fetch upstream
     git merge upstream/master
     ```
+- git log
+  - `git log --pretty=oneline`
+  - `git log -p <file>`
+- git mv
+  - short for 
+  ```
+  mv
+  git add .
+  ``` 
+  - also short for
+  ```
+  mv 
+  git rm <old file>
+  git add <new file>
+  ```
+- git reset HEAD <file>...
+  - reverse operation of `git add`
