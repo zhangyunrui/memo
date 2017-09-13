@@ -25,8 +25,8 @@
     git merge upstream/master
     ```
 - git log
-  - `git log --pretty=oneline`
-  - `git log -p <file>`
+  - `git log --pretty=oneline` log 在一行显示
+  - `git log -p <file>` 查看一个文件的每个版本的更改
 - git mv
   - short for 
   ```
