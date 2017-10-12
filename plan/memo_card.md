@@ -1,0 +1,26 @@
+- Mysql
+  - Control Flow Functions
+    - CASE
+    - IF
+    - IFNULL
+    - NULLIF
+      - STRCMP
+  - utf8mb4_unicode_ci 速度上比 utf8mb4_general_ci 慢百分之十，但排序更精确
+  - `ALTER TABLE tableName CHANGE "oldcolname" "newcolname" datatype(length);`
+  - `SET FOREIGN_KEY_CHECKS = 0;` 关闭外键检查
+  - 影响行数
+    - FOUND_ROWS() : select 
+    - ROW_COUNT()  : update delete insert
+  - function
+    - LOWER()
+    - TRIM()
+  - time
+    - DATE_FORMAT(now(), '%Y-%m-%d')
+    - UNIX_TIMESTAMP(now())
+    - UNIX_TIMESTAMP('2016-01-02')
+    - STR_TO_DATE('2016-01-02', '%Y-%m-%d')
+    - FROM_UNIXTIME(1451997924)
+    - FROM_UNIXTIME(1451997924,'%Y-%d')
+  - json 类型字段长度的限制
+    - `set global max_allowed_packet=999`
+    - `mysql --max_allowed_packet=999`

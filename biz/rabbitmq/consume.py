@@ -16,5 +16,5 @@ channel.basic_consume(
     no_ack=True
 )
 
-print(' [*] waiting for message, to stop press ctrl+C')
+print(' [*] waiting for message, to stop press ctrl+B')
 channel.start_consuming()
