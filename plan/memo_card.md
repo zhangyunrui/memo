@@ -24,3 +24,12 @@
   - json 类型字段长度的限制
     - `set global max_allowed_packet=999`
     - `mysql --max_allowed_packet=999`
+    
+- Git
+  - `git rebase -i <commit>` 把要合并的改为`squash`
+  - `git reset`
+    - `--hard` 齐头切
+    - `--mixed` 切最外层和中间层，保留最内层
+    - `--soft` 切最外层，保留中间层和最内层 (可以用作合并 commit)
+  - `git commit -a` = `git add -U` 加 `git commit`
+    
