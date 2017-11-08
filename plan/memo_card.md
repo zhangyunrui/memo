@@ -1,4 +1,6 @@
 - Mysql
+  - 坑
+    - NULL <> 1 -> false
   - Control Flow Functions
     - CASE
     - IF
@@ -63,6 +65,12 @@
         - DELETE 删除版本号为"当前系统"版本号
         - UPDATE 相当于 DELETE 老的,INSERT 新的
       - MVCC 只在 READ COMMITTED 和 REPEATABLE READ 下生效
+  - trigger
+    - 注意事项
+      - trigger 应该是紧接 Event on Table 的单语句事务,而不能依赖多语句事务
+      - 当报错报的莫名奇妙时,很有可能是 trigger 写错了
+  - time_zone
+    - `SHOW Variable like '%time_zone%'`
     
 - Git
   - `git rebase -i <commit>` 把要合并的改为`squash`
@@ -74,11 +82,21 @@
 
 - ES
   - `GET /_cat/indices?v` List All indices
-  - document 增删该查
+  - document 增删改查
     - `PUT /{index}/{type}/{id}` 新增或更新 document,新增时也可以不要 id
-      - 保证是新增 `?op_type=create` or `_create`
+      - 保证是新增 `?op_type=create` or `/_create`
         - 201 Created: 创建成功
         - 409 Conflict: 冲突
+      - 版本控制
+        - `?version=1` 只希望 document 的 _version 是 1 时更新才生效
+        - `?version=5&version_type=external` 使用外部版本号,版本号小于 5 的文档才能被更新 
+      - 局部更新 `?/_update`
+        - ` -d {"doc": {"key1": 1, "key2": 2}}` 存在的标量字段被覆盖,新字段被添加
+        - 使用 Groovy 脚本
+          - ` -d {"script": "ctx._source.views+=1"}`
+          - ` -d {"script": "ctx._source.views+=1", "upsert": {"views": 1}}` 等于`INSERT ... ON DUPLICATE KEY UPDATE`
+          - ` -d {"script": "ctx._source.tags+=new_tag", "params": {"new_tag": "a"}}` tags 是数组
+          - `?retry_on_conflict=5 -d {"script": "ctx._source.views+=1", "upsert": {"views": 0}}` 在发生错误前重试5次,默认值为0 todo 为0?
     - `GET /{index}/{type}/{id}` 按 id 查询 document
       - `/?pretty` 以更美的格式返回结果
       - `/?_source={key1},{key2}` 只返回 key1,key2 字段 
@@ -87,4 +105,32 @@
     - `DELETE /{index}/{type}/{id}` 删除,注意即使没找到 _version 也会增加，确保在多节点间正确的操作顺序
       - 200 OK: {"found": true}
       - 404 Not Found: {"found": false}
-  
+    - _mget
+      - `GET /_mget` -d
+        - ```js
+          {
+            "docs": [
+              {
+                "_index": "website",
+                "_type": "blog",
+                "_id": 2
+              },
+              {
+                "_index": "website",
+                "_type": "pageviews",
+                "_id": 1,
+                "_source": "views"
+              }
+            ]
+          }
+          ```
+      - `GET /website/blog/_mget` -d
+        - ```js
+          {
+            "docs" : [
+              { "_id" : 2 },
+              { "_type" : "pageviews", "_id" :   1 }
+            ]
+          }
+          ```
+        - `{"ids": ["2", "1"]}`
