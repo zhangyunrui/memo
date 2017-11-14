@@ -134,3 +134,10 @@
           }
           ```
         - `{"ids": ["2", "1"]}`
+    - 搜索 `/_search`
+      - 空搜索 `GET /_search`
+      - 多索引多类别
+        - `/{index1},{index2},{3*}/{type1},{type2}/_search`
+        - `/_all/{type1},{type2}/_search`
+      - 限时 `?timeout=10ms`
+      - 分页 `?size=10&from=20`

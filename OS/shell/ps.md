@@ -1,0 +1,5 @@
+- 用 screen 启动进程
+  - `screen -r` 进到虚拟屏幕
+  - ctrl+A+d 退出虚拟屏幕
+  - `ps axf` 查看进程树
+  - `screen -r <pid>` 再次进入,pid 为版本号
