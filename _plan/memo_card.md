@@ -71,6 +71,11 @@
       - 当报错报的莫名奇妙时,很有可能是 trigger 写错了
   - time_zone
     - `SHOW Variable like '%time_zone%'`
+  - 插入重复主键的处理
+    - `insert ignore`
+    - `replace into` 先删后插
+    - `insert into on duplicate update`
+    - `insert delayed` InnoDB 不支持
     
 - Git
   - `git rebase -i <commit>` 把要合并的改为`squash`

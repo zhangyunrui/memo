@@ -1,0 +1,7 @@
+- 设备上报自己的信息，比如升级是否成功，是否激活
+- OTA Amazon FreeRTOS：集成了一些 iot 连接的组建的系统？
+- 更标准的认证过程？
+- iot shadow 有大小限制
+- Qos 只支持 0 & 1
+- message can be binary, but the Rules Engine can only act on JSON payload
+- 消息按条计费，每条 5120 bytes
