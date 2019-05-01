@@ -1,0 +1,1 @@
+- add classpath: Project Structure-> Libraries and click green "+" to add the directory folder that has the JARs to CLASSPATH

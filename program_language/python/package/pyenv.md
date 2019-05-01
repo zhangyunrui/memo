@@ -1,0 +1,1 @@
+- `pyenv install 2.7` 安装 2.7 到 pyenv

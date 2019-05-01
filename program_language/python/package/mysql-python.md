@@ -1,0 +1,3 @@
+- mac 安装 mysql-python
+  - `brew install mysql-connector-c`
+  - `sudo pip install MySQL-python`（如果不行，先 uninstall)

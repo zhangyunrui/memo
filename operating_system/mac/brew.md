@@ -1,0 +1,2 @@
+- `brew list` 查看所有 brew 安装的包
+- `brew info <package>` 查看包信息

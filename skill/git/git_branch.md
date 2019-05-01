@@ -1,0 +1,4 @@
+- git remote show origin 显示本地与远程分支的关系信息
+- git remote prune origin (--dry-run) 清理本地失效的的远程分支跟踪
+- git branch -d <branch_name> 删除本地名为 branch_name 的 branch
+- git push origin :<branch_name> 删除远程名为 branch_name 的 branch

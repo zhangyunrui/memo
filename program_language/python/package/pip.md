@@ -1,0 +1,1 @@
+- `pip show <package>` 查看包信息
